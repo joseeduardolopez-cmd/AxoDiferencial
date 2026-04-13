@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AxoDiferencial - Ecuaciones Diferenciales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <div id="particles"></div>
+<div id="intro">
+  <img src="Imagenes/logo.jpeg">
+</div>
+
+
+<header>
+  <h1>AxoDiferencial</h1>
+  <nav>
+    <a href="#funciones">Funciones</a>
+    <a href="#mockups">Cómo funciona</a>
+   
+    <a href="#equipo">Equipo</a>
+  </nav>
+</header>
+
+<section class="hero fade-in">
+  <img src="Imagenes/logo.jpeg" class="float">
+  <h2>Resuelve Ecuaciones Diferenciales en Segundos</h2>
+  <p>Todo el alcance de las Ecuaciones en la palma de tu Mano </p>
+
+</section>
+
+<section id="funciones" class="fade-in">
+  <h2>Funciones</h2>
+  <p>La aplicación integra múltiples métodos matemáticos para resolver ecuaciones diferenciales de forma rápida, precisa y estructurada.</p>
+  <div class="cards">
+    <div class="card">Separables</div>
+    <div class="card">Homogeneas</div>
+    <div class="card">Exactas</div>
+    <div class="card">Factor de Integracion</div>
+    <div class="card">Lineales</div>
+    <div class="card">Reduccion a primer orden</div>
+    <div class="card">Ecuaciones Diferenciales Lineales</div>
+    <div class="card">Superposicion</div>
+    <div class="card">Independencia Lineal</div>
+    <div class="card">Wronskiano</div>
+  </div>
+</section>
+
+<section id="mockups" class="fade-in">
+  <h2>Como Funciona </h2>
+  <p>AxoDiferencial analiza la ecuación ingresada, identifica su tipo y aplica automáticamente el método más adecuado, mostrando el procedimiento paso a paso.</p>
+  <div class="phones-container">
+    <div class="phone float"><img src="Imagenes/app.jpg"></div>
+    <div class="phone float"><img src="Imagenes/app1.jpg"></div>
+    <div class="phone float"><img src="Imagenes/app2.jpg"></div>
+    <div class="phone float"><img src="Imagenes/app3.jpg"></div>
+  </div>
+</section>
+
+
+
+
+<section id="equipo"> <h2>Equipo de Desarrollo</h2>    
+     <p>Equipo multidisciplinario encargado del desarrollo, diseño e implementación de la aplicación AxoDiferencial.</p>
+     <div class="equipo-container"> <div class="miembro"> 
+        <p>Sanchez Sanchez Eliot Jesus</p> <span>Backend Engineer & Math Logic Lead </span> </div> <div class="miembro"> 
+        <p>Lopez Aguilar Jose Eduardo</p> <span>Documentation & Devops Specialist</span> </div> <div class="miembro">
+        <p>Melendez Hernandez Julissa Lizbeth</p> <span>QA Engineer & Mathematical Testes</span> </div> <div class="miembro"> 
+        <p>Plata Barboa Jonathan Oswaldo</p> <span>UI/UX Desingner & Frontend Developer</span> </div> <div class="miembro"> 
+        <p>Dias Reyes Miguel Angel</p> <span>Project Manager & Lead Strategy</span> </div> </div> </section>
+<footer>
+  <p>© 2026 AxoDiferencial</p>
+   <p>axo.diferencial@gmail.com</p>
+</footer>
+
+<script>
+  function scrollToDownload() {
+    document.getElementById('descarga').scrollIntoView({ behavior: 'smooth' });
+  }
+
+
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script>
+tsParticles.load("particles", {
+  particles: {
+    number: { value: 50 },
+    color: { value: "#22d3ee" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    move: {
+      enable: true,
+      speed: 1
+    },
+    links: {
+      enable: true,
+      distance: 120,
+      color: "#22d3ee",
+      opacity: 0.3,
+      width: 1
+    }
+  },
+  background: {
+    color: "transparent"
+  }
+});
+</script>
+</body>
+</html>
